@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('metaTitle', ' | Index')
+
 @section('content')
     <table>
         <tr>
