@@ -1,12 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    <ul>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Slug</th>
+            <th>Content</th>
+            <th>Published at</th>
+        </tr>
+
         @foreach ($posts as $el)
-            <li>
-                <h3>{{ $el->title }}</h3>
-                <p>{{ $el->slug }}</p>
-            </li>
+            <tr>
+                <td>
+                    <strong>{{ $el->id }}</strong>
+                </td>
+                <td class="title">{{ $el->title }}</td>
+                <td>{{ $el->slug }}</td>
+                <td>{{ $el->content }}</td>
+                <td>
+                    @if ($el->published_at == '')
+                        NULL
+                    @else
+                        {{ $el->published_at }}
+                    @endif
+                </td>
+            </tr>
         @endforeach
-    </ul>
+    </table>
 @endsection

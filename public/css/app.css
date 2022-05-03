@@ -10962,3 +10962,28 @@ a.text-dark:focus {
   }
 }
 
+html {
+  font-size: 14px;
+}
+
+table {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+table th {
+  font-size: 15px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table .title {
+  text-transform: capitalize;
+}
+

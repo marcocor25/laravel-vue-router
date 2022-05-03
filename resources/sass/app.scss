@@ -1,8 +1,33 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+html {
+    font-size: 14px;
+}
+
+table {
+    width: 80vw;
+    margin: 0 auto;
+
+    th {
+        font-size: 15px;
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    .title {
+        text-transform: capitalize;
+    }
+}
