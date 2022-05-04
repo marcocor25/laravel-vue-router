@@ -37,8 +37,8 @@
             </div>
             <div class="form-group">
                 <label for="published_at">Data e ora di pubblicazione</label>
-                <input type="datetime-local" class="form-control @error('published_at') is-invalid @enderror"
-                    name="published_at" id="published_at" value="{{ old('published_at') ?: $post->published_at }}">
+                <input type="date" class="form-control @error('published_at') is-invalid @enderror" name="published_at"
+                    id="published_at" value="{{ old('published_at') ?: Str::substr($post->published_at, 0, 10) }}">
                 @error('published_at')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
