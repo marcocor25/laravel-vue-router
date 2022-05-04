@@ -15,14 +15,14 @@ class PostSeeder extends Seeder
     public function run(Faker $faker)
     {
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 50; $i++) {
 
             $post = new Post();
             $post->title = $faker->words(8, true);
             $post->slug = Str::slug($post->title);
-            $post->content = $faker->paragraph(10, true);
+            $post->content = $faker->paragraph(5, true);
             $post->image = $faker->url();
-            $post->published_at = $faker->randomElement([null, $faker->dateTime()]);
+            $post->published_at = $faker->optional()->dateTime();
             $post->save();
         }
     }
