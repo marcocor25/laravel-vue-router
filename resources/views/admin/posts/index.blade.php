@@ -38,7 +38,7 @@
                             @endif
                         </td>
                         <td>
-                            <a class="btn btn-success px-4" href="">
+                            <a class="btn btn-success px-4" href="{{ route('admin.posts.edit', $el) }}">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
                         </td>
