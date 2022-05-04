@@ -43,9 +43,17 @@
                             </a>
                         </td>
                         <td>
-                            <a class="btn btn-danger px-4" href="">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
+                            <form action="{{ route('admin.posts.destroy', $el) }}" method="POST">
+
+                                @csrf
+
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger px-4">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+
+                            </form>
                         </td>
                     </tr>
                 @endforeach
