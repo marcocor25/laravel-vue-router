@@ -5,16 +5,20 @@
 @section('content')
 
     <div class="container">
-        <h1 class="py-2">Tutti i post</h1>
+
+        <div class="pb-4 d-flex justify-content-between align-items-center">
+            <h1>Tutti i post</h1>
+            <a class="btn btn-dark" href="{{ route('admin.posts.create') }}">Nuovo post</a>
+        </div>
 
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Title</th>
+                    <th scope="col">Titolo</th>
                     <th scope="col">Slug</th>
-                    <th scope="col">Content</th>
-                    <th scope="col">Published at</th>
+                    <th scope="col">Contenuto</th>
+                    <th scope="col">Pubblicato il</th>
                 </tr>
             </thead>
             <tbody>

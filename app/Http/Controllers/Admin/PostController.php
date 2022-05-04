@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -38,13 +39,38 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->all();
+
         $request->validate([
             'title' => 'required|min:5',
             'content' => 'required|min:10',
-            'published_at' => 'nullable|date|before_or_equal:today',
+            'published_at' => 'nullable|date',
         ]);
 
-        dd($request->all());
+        $slug = Str::slug($data['title']);
+
+        $slug_base = $slug;
+
+        $counter = 1;
+
+        $post_present = Post::where('slug', $slug)->first();
+
+        while ($post_present) {
+
+            $slug = $slug_base . '-' . $counter;
+            $counter++;
+            $post_present = Post::where('slug', $slug)->first();
+        }
+
+        $post = new Post();
+
+        $post->fill($data);
+
+        $post->slug = $slug;
+
+        $post->save();
+
+        return redirect()->route('admin.posts.index');
     }
 
     /**
