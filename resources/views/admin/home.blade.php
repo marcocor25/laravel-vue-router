@@ -16,7 +16,9 @@
                             </div>
                         @endif
 
-                        <a href="{{ route('admin.posts.index') }}">Go to index</a>
+                        <h3>
+                            <a href="{{ route('admin.posts.index') }}">Go to index</a>
+                        </h3>
 
                     </div>
                 </div>

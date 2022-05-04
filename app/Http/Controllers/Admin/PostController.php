@@ -38,7 +38,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|min:5',
+            'content' => 'required|min:10',
+            'published_at' => 'nullable|date|before_or_equal:today',
+        ]);
+
+        dd($request->all());
     }
 
     /**
