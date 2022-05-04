@@ -67,10 +67,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -102,10 +102,11 @@ class PostController extends Controller
         $data = $request->all();
 
         if ($post->title != $data['title']) {
-            $slug = Post::getUniqueSlug($data['title']);
-        };
 
-        $data['slug'] = $slug;
+            $slug = Post::getUniqueSlug($data['title']);
+
+            $data['slug'] = $slug;
+        };
 
         $post->update($data);
 
