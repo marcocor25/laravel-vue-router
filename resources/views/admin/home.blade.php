@@ -16,9 +16,7 @@
                             </div>
                         @endif
 
-                        <h3>
-                            <a href="{{ route('admin.posts.index') }}">Go to index</a>
-                        </h3>
+                        <a class="btn btn-primary" href="{{ route('admin.posts.index') }}">Go to index</a>
 
                     </div>
                 </div>

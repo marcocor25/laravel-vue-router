@@ -18,7 +18,9 @@
                     <th scope="col">Titolo</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Contenuto</th>
-                    <th scope="col">Pubblicato il</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Modifica</th>
+                    <th scope="col">Cancella</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +36,16 @@
                             @else
                                 {{ $el->published_at }}
                             @endif
+                        </td>
+                        <td>
+                            <a class="btn btn-success px-4" href="">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger px-4" href="">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach
