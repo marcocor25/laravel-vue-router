@@ -33,7 +33,8 @@
                     <option value="" selected disabled>Seleziona una categoria</option>
                     <option value="">Nessuna</option>
                     @foreach ($categories as $el)
-                        <option {{ old('category_id') == $el->id ? 'selected' : '' }} value="{{ $el->id }}">
+                        <option {{ old('category_id', optional($post->category)->id) == $el->id ? 'selected' : '' }}
+                            value="{{ $el->id }}">
                             {{ $el->name }}</option>
                     @endforeach
                 </select>
@@ -57,8 +58,8 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="reset" form="edit-form" class="btn btn-secondary">Reset</button>
-            <button type="submit" form="edit-form" class="btn btn-primary">Salva</button>
+            <button type="reset" for="edit-form" class="btn btn-secondary">Reset</button>
+            <button type="submit" for="edit-form" class="btn btn-primary">Salva</button>
         </form>
 
     </div>

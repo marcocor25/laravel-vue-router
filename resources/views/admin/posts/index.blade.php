@@ -45,13 +45,14 @@
                             </a>
                         </td>
                         <td>
-                            <form id="delete-form" action="{{ route('admin.posts.destroy', $el) }}" method="POST">
+                            <form id="delete-form-{{ $el->id }}" action="{{ route('admin.posts.destroy', $el) }}"
+                                method="POST">
 
                                 @csrf
 
                                 @method('DELETE')
 
-                                <button type="submit" form="delete-form" class="btn btn-danger px-4">
+                                <button type="submit" for="delete-form-{{ $el->id }}" class="btn btn-danger px-4">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
 

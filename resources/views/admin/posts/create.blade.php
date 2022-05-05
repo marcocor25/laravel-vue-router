@@ -51,8 +51,8 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="reset" form="create-form" class="btn btn-secondary">Reset</button>
-            <button type="submit" form="create-form" class="btn btn-primary">Crea</button>
+            <button type="reset" for="create-form" class="btn btn-secondary">Reset</button>
+            <button type="submit" for="create-form" class="btn btn-primary">Crea</button>
         </form>
     </div>
 @endsection
