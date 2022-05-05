@@ -13,7 +13,7 @@
             <a class="btn btn-info" href="{{ route('admin.posts.index') }}">Torna all'Index</a>
         </div>
 
-        <form action="{{ route('admin.posts.update', $post) }}" method="POST">
+        <form id="edit-form" action="{{ route('admin.posts.update', $post) }}" method="POST">
 
             @csrf
 
@@ -24,6 +24,20 @@
                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
                     value="{{ old('title') ?: $post->title }}" placeholder="Inserisci un titolo...">
                 @error('title')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="form-group">
+                <label for="category_id">Categoria</label>
+                <select class="form-control @error('category_id') is-invalid @enderror" name="category_id" id="category_id">
+                    <option value="" selected disabled>Seleziona una categoria</option>
+                    <option value="">Nessuna</option>
+                    @foreach ($categories as $el)
+                        <option {{ old('category_id') == $el->id ? 'selected' : '' }} value="{{ $el->id }}">
+                            {{ $el->name }}</option>
+                    @endforeach
+                </select>
+                @error('category_id')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
@@ -43,8 +57,8 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="reset" class="btn btn-secondary">Reset</button>
-            <button type="submit" class="btn btn-primary">Salva</button>
+            <button type="reset" form="edit-form" class="btn btn-secondary">Reset</button>
+            <button type="submit" form="edit-form" class="btn btn-primary">Salva</button>
         </form>
 
     </div>

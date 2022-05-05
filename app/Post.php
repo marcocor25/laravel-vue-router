@@ -11,9 +11,15 @@ class Post extends Model
     protected $fillable = [
         'title',
         'slug',
+        'category_id',
         'content',
         'published_at',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 
     public static function getUniqueSlug($title)
     {

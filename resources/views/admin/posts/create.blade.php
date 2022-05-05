@@ -9,7 +9,7 @@
             <a class="btn btn-info" href="{{ route('admin.posts.index') }}">Torna all'Index</a>
         </div>
 
-        <form action="{{ route('admin.posts.store') }}" method="POST">
+        <form id="create-form" action="{{ route('admin.posts.store') }}" method="POST">
 
             @csrf
 
@@ -27,8 +27,8 @@
                     <option value="" selected disabled>Seleziona una categoria</option>
                     <option value="">Nessuna</option>
                     @foreach ($categories as $el)
-                        <option {{ old('category_id') && old('category_id') == $el->id ? 'selected' : '' }}
-                            value="{{ $el->id }}">{{ $el->name }}</option>
+                        <option {{ old('category_id') == $el->id ? 'selected' : '' }} value="{{ $el->id }}">
+                            {{ $el->name }}</option>
                     @endforeach
                 </select>
                 @error('category_id')
@@ -51,8 +51,8 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="reset" class="btn btn-secondary">Reset</button>
-            <button type="submit" class="btn btn-primary">Crea</button>
+            <button type="reset" form="create-form" class="btn btn-secondary">Reset</button>
+            <button type="submit" form="create-form" class="btn btn-primary">Crea</button>
         </form>
     </div>
 @endsection

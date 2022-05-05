@@ -17,8 +17,9 @@
                     <th scope="col">#</th>
                     <th scope="col">Titolo</th>
                     <th scope="col">Slug</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Contenuto</th>
-                    <th scope="col">Data</th>
+                    <th scope="col">Data di pubblicazione</th>
                     <th scope="col">Modifica</th>
                     <th scope="col">Cancella</th>
                 </tr>
@@ -29,6 +30,7 @@
                         <td class="font-weight-bold">{{ $el->id }}</td>
                         <td class="text-capitalize">{{ $el->title }}</td>
                         <td>{{ $el->slug }}</td>
+                        <td>{{ $el->category ? $el->category->name : '-' }}</td>
                         <td>{{ $el->content }}</td>
                         <td>
                             @if ($el->published_at == '')
@@ -43,13 +45,13 @@
                             </a>
                         </td>
                         <td>
-                            <form action="{{ route('admin.posts.destroy', $el) }}" method="POST">
+                            <form id="delete-form" action="{{ route('admin.posts.destroy', $el) }}" method="POST">
 
                                 @csrf
 
                                 @method('DELETE')
 
-                                <button type="submit" class="btn btn-danger px-4">
+                                <button type="submit" form="delete-form" class="btn btn-danger px-4">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
 
