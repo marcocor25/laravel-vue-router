@@ -18,6 +18,7 @@
                     <th scope="col">Titolo</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Categoria</th>
+                    <th scope="col">Tags</th>
                     <th scope="col">Contenuto</th>
                     <th scope="col">Data di pubblicazione</th>
                     <th scope="col">Modifica</th>
@@ -31,6 +32,11 @@
                         <td class="text-capitalize">{{ $el->title }}</td>
                         <td>{{ $el->slug }}</td>
                         <td>{{ $el->category ? $el->category->name : '-' }}</td>
+                        <td>
+                            @foreach ($el->tags as $tag)
+                                <span class="badge badge-pill badge-primary">{{ $tag->name }}</span>
+                            @endforeach
+                        </td>
                         <td>{{ $el->content }}</td>
                         <td>
                             @if ($el->published_at == '')
