@@ -42,6 +42,21 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
+            {{-- TAGS --}}
+            <label>Tags:</label>
+            <div class="d-flex" style="gap: 20px">
+                @foreach ($tags as $tag)
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" name="tags[]" id="tags-{{ $tag->id }}"
+                            value="{{ $tag->id }}" {{ $post->tags->contains($tag) ? 'checked' : '' }}>
+                        <label class="form-check-label" for="tags-{{ $tag->id }}">{{ $tag->name }}</label>
+                    </div>
+                @endforeach
+            </div>
+            @error('tags')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+            {{-- CONTENT --}}
             <div class="form-group">
                 <label for="content">Contenuto del post*</label>
                 <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" rows="3"

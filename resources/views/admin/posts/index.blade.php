@@ -34,7 +34,7 @@
                         <td>{{ $el->category ? $el->category->name : '-' }}</td>
                         <td>
                             @foreach ($el->tags as $tag)
-                                <span class="badge badge-pill badge-primary">{{ $tag->name }}</span>
+                                <span class="badge badge-pill badge-info">{{ $tag->name }}</span>
                             @endforeach
                         </td>
                         <td>{{ $el->content }}</td>
