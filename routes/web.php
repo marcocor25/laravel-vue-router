@@ -29,3 +29,7 @@ Route::middleware('auth')
 
         Route::resource('posts', 'PostController')->except('show');
     });
+
+Route::fallback(function () {
+    return view('guest.home');
+});
