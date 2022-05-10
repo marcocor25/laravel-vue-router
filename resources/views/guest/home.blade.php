@@ -25,9 +25,7 @@
 
 <body>
 
-    <div id="app">
-        <h1>Ciao</h1>
-    </div>
+    <div id="app"></div>
 
     <script src="{{ asset('js/front.js') }}"></script>
 
