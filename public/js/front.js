@@ -1924,10 +1924,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1998,7 +1994,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-62ebce5c] {\n  width: 75vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: white;\n}\n.container .title-wrapper[data-v-62ebce5c] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container h1[data-v-62ebce5c] {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #333;\n  font-size: 40px;\n  color: #333;\n}\n.container .card[data-v-62ebce5c] {\n  width: calc(50% - 20px);\n  min-height: 250px;\n  padding: 10px;\n  box-shadow: 2px 2px 5px #bbb;\n  border-radius: 10px;\n}", ""]);
+exports.push([module.i, ".container[data-v-62ebce5c] {\n  width: 75vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: white;\n}\n.container .title-wrapper[data-v-62ebce5c] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-62ebce5c] {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #333;\n  font-size: 36px;\n  color: #333;\n}\n.container .card[data-v-62ebce5c] {\n  width: calc(50% - 20px);\n  min-height: 250px;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  padding: 10px;\n  box-shadow: 2px 2px 5px #bbb;\n  border-radius: 10px;\n}\n.container .card .card-title[data-v-62ebce5c] {\n  text-transform: capitalize;\n  color: #333;\n}", ""]);
 
 // exports
 
@@ -3171,9 +3167,9 @@ var render = function () {
       { staticClass: "container" },
       _vm._l(_vm.posts, function (post) {
         return _c("div", { key: post.id, staticClass: "card" }, [
-          _c("h3", [_vm._v("\n        " + _vm._s(post.title) + "\n      ")]),
+          _c("h3", { staticClass: "card-title" }, [_vm._v(_vm._s(post.title))]),
           _vm._v(" "),
-          _c("p", [_vm._v("\n        " + _vm._s(post.content) + "\n      ")]),
+          _c("p", [_vm._v(_vm._s(post.content))]),
         ])
       }),
       0
