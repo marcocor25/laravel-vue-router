@@ -1998,7 +1998,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-62ebce5c] {\n  width: 80vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: white;\n}\n.container .title-wrapper[data-v-62ebce5c] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container h1[data-v-62ebce5c] {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #333;\n  font-size: 40px;\n  color: #333;\n}\n.container .card[data-v-62ebce5c] {\n  width: calc(33.3333333333% - 20px);\n  min-height: 250px;\n  padding: 10px;\n  box-shadow: 2px 2px 5px #bbb;\n  border-radius: 10px;\n}", ""]);
+exports.push([module.i, ".container[data-v-62ebce5c] {\n  width: 75vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: white;\n}\n.container .title-wrapper[data-v-62ebce5c] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container h1[data-v-62ebce5c] {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #333;\n  font-size: 40px;\n  color: #333;\n}\n.container .card[data-v-62ebce5c] {\n  width: calc(50% - 20px);\n  min-height: 250px;\n  padding: 10px;\n  box-shadow: 2px 2px 5px #bbb;\n  border-radius: 10px;\n}", ""]);
 
 // exports
 

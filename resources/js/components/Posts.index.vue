@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  width: 80vw;
+  width: 75vw;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -69,7 +69,7 @@ export default {
   }
 
   .card {
-    width: calc((100% / 3) - 20px);
+    width: calc((100% / 2) - 20px);
     min-height: 250px;
     padding: 10px;
     box-shadow: 2px 2px 5px #bbb;
