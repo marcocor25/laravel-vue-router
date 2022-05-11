@@ -2004,6 +2004,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2020,7 +2026,12 @@ __webpack_require__.r(__webpack_exports__);
     fetchPosts: function fetchPosts() {
       var _this = this;
 
-      axios.get("/api/posts").then(function (res) {
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get("/api/posts", {
+        params: {
+          page: page
+        }
+      }).then(function (res) {
         var posts = res.data.posts;
         var data = posts.data,
             last_page = posts.last_page,
@@ -2071,7 +2082,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#app[data-v-91ac6b5c] {\n  min-height: 100vh;\n  background: #e9ebee;\n}\n#app header[data-v-91ac6b5c] {\n  min-height: 9vh;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 0 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  left: 0;\n  box-shadow: 0 5px 5px #e9ebee;\n  z-index: 999;\n  color: #f5f5f5;\n  background: #2c72ba;\n}\n#app header h1[data-v-91ac6b5c] {\n  font-weight: 900;\n}\n#app header .logo[data-v-91ac6b5c] {\n  width: 35px;\n  height: 35px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 30px;\n  border-radius: 10px;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  color: #2c72ba;\n  transition: 500ms ease-in-out;\n  background: #f5f5f5;\n}\n#app header .logo[data-v-91ac6b5c]:hover {\n  transform: rotate(180deg);\n}\n#app footer[data-v-91ac6b5c] {\n  min-height: 30vh;\n  display: flex;\n  align-items: center;\n  padding: 0 20px;\n  color: #f5f5f5;\n  background: #2c72ba;\n}", ""]);
+exports.push([module.i, "#app[data-v-91ac6b5c] {\n  min-height: 100vh;\n  background: #e9ebee;\n}\n#app header[data-v-91ac6b5c] {\n  min-height: 9vh;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 0 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  left: 0;\n  box-shadow: 0 5px 5px #e9ebee;\n  z-index: 999;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  color: #f5f5f5;\n  background: #2c72ba;\n}\n#app header h1[data-v-91ac6b5c] {\n  font-weight: 900;\n}\n#app header .logo[data-v-91ac6b5c] {\n  width: 35px;\n  height: 35px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 30px;\n  border-radius: 10px;\n  cursor: pointer;\n  color: #2c72ba;\n  transition: 500ms ease-in-out;\n  background: #f5f5f5;\n}\n#app header .logo[data-v-91ac6b5c]:hover {\n  transform: rotate(180deg);\n}\n#app footer[data-v-91ac6b5c] {\n  min-height: 30vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0 20px;\n  color: #f5f5f5;\n  background: #2c72ba;\n}", ""]);
 
 // exports
 
@@ -2090,7 +2101,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-1585f328] {\n  width: 80vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #ffffff;\n}\n.container .title-wrapper[data-v-1585f328] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-1585f328] {\n  padding-bottom: 10px;\n  border-bottom: 0.5px solid #333;\n  font-size: 36px;\n  color: #333;\n}\n.container .pagination[data-v-1585f328] {\n  display: flex;\n  gap: 10px;\n}\n.container .pagination .page[data-v-1585f328] {\n  width: 20px;\n  height: 20px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  border: 1px solid #999;\n  font-weight: bolder;\n  font-size: 12px;\n  color: #555;\n}", ""]);
+exports.push([module.i, ".container[data-v-1585f328] {\n  width: 80vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #ffffff;\n}\n.container .title-wrapper[data-v-1585f328] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-1585f328] {\n  padding-bottom: 10px;\n  border-bottom: 0.5px solid #333;\n  font-size: 36px;\n  color: #333;\n}\n.container .pagination[data-v-1585f328] {\n  display: flex;\n  gap: 10px;\n}\n.container .pagination .page[data-v-1585f328] {\n  width: 25px;\n  height: 25px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  border: 1px solid #bbb;\n  font-weight: bolder;\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  color: #aaa;\n}\n.container .pagination .page[data-v-1585f328]:hover {\n  color: #f5f5f5;\n  background: #2c72ba;\n}\n.container .pagination .active[data-v-1585f328] {\n  color: #f5f5f5;\n  background: #2c72ba;\n}", ""]);
 
 // exports
 
@@ -3340,7 +3351,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", [_c("h1", [_vm._v("Footer")])])
+    return _c("footer", [_c("h2", [_vm._v("© Boolbook")])])
   },
 ]
 render._withStripped = true
@@ -3381,9 +3392,20 @@ var render = function () {
         "ul",
         { staticClass: "pagination" },
         _vm._l(_vm.lastPage, function (n) {
-          return _c("li", { key: n, staticClass: "page" }, [
-            _vm._v("\n        " + _vm._s(n) + "\n      "),
-          ])
+          return _c(
+            "li",
+            {
+              key: n,
+              staticClass: "page",
+              class: [_vm.currentPage == n ? "active" : ""],
+              on: {
+                click: function ($event) {
+                  return _vm.fetchPosts(n)
+                },
+              },
+            },
+            [_vm._v("\n        " + _vm._s(n) + "\n      ")]
+          )
         }),
         0
       ),

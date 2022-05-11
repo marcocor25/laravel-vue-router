@@ -8,7 +8,7 @@
       <PostsGrid />
     </main>
     <footer>
-      <h1>Footer</h1>
+      <h2>&copy; Boolbook</h2>
     </footer>
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
     left: 0;
     box-shadow: 0 5px 5px #e9ebee;
     z-index: 999;
+    user-select: none;
     color: #f5f5f5;
     background: #2c72ba;
 
@@ -54,7 +55,6 @@ export default {
       align-items: center;
       font-size: 30px;
       border-radius: 10px;
-      user-select: none;
       cursor: pointer;
       color: #2c72ba;
       transition: 500ms ease-in-out;
@@ -69,6 +69,7 @@ export default {
   footer {
     min-height: 30vh;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
     color: #f5f5f5;

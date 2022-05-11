@@ -10,7 +10,13 @@
     </div>
     <div class="container">
       <ul class="pagination">
-        <li class="page" v-for="n in lastPage" :key="n">
+        <li
+          @click="fetchPosts(n)"
+          :class="[currentPage == n ? 'active' : '']"
+          class="page"
+          v-for="n in lastPage"
+          :key="n"
+        >
           {{ n }}
         </li>
       </ul>
@@ -33,9 +39,13 @@ export default {
     };
   },
   methods: {
-    fetchPosts() {
+    fetchPosts(page = 1) {
       axios
-        .get("/api/posts")
+        .get("/api/posts", {
+          params: {
+            page: page,
+          },
+        })
         .then((res) => {
           const { posts } = res.data;
 
@@ -86,16 +96,27 @@ export default {
     gap: 10px;
 
     .page {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 50%;
-      border: 1px solid #999;
+      border-radius: 8px;
+      border: 1px solid #bbb;
       font-weight: bolder;
-      font-size: 12px;
-      color: #555;
+      cursor: pointer;
+      user-select: none;
+      color: #aaa;
+
+      &:hover {
+        color: #f5f5f5;
+        background: #2c72ba;
+      }
+    }
+
+    .active {
+      color: #f5f5f5;
+      background: #2c72ba;
     }
   }
 }
