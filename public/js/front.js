@@ -3419,7 +3419,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "title-wrapper" }, [
-        _c("h1", [_vm._v("Tutti i post")]),
+        _c("h1", [_vm._v("Ultimi post")]),
       ]),
     ])
   },

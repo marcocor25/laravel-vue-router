@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="title-wrapper">
-        <h1>Tutti i post</h1>
+        <h1>Ultimi post</h1>
       </div>
     </div>
     <div class="container">
