@@ -45,14 +45,14 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  width: 70vw;
+  width: 80vw;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 auto;
   padding: 20px;
-  background: white;
+  background: #ffffff;
 
   .title-wrapper {
     padding: 10px;
@@ -60,7 +60,7 @@ export default {
 
     h1 {
       padding-bottom: 10px;
-      border-bottom: 1px solid #333;
+      border-bottom: 0.5px solid #333;
       font-size: 36px;
       color: #333;
     }

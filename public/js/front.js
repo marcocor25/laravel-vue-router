@@ -1964,6 +1964,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2037,7 +2038,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-1324358a] {\n  width: calc(50% - 20px);\n  min-height: 260px;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  padding: 20px;\n  box-shadow: 2px 2px 5px #bbb;\n  border-radius: 10px;\n}\n.card .card-title[data-v-1324358a] {\n  text-transform: capitalize;\n  color: #333;\n}\n.card .card-category[data-v-1324358a] {\n  font-weight: bold;\n  color: #2c72ba;\n}\n.card .card-content[data-v-1324358a] {\n  line-height: 22px;\n}\n.card .card-tag-wrapper[data-v-1324358a] {\n  display: flex;\n  gap: 10px;\n}\n.card .card-tag-wrapper .card-tag[data-v-1324358a] {\n  padding: 3px 6px;\n  border-radius: 20px;\n  font-weight: bold;\n  font-size: 12px;\n  color: #f5f5f5;\n  background: #2c72ba;\n}", ""]);
+exports.push([module.i, ".card[data-v-1324358a] {\n  width: calc(50% - 20px);\n  min-height: 260px;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  padding: 20px;\n  box-shadow: 2px 2px 5px #bbb;\n  border-radius: 10px;\n  transition: 1s ease-in-out;\n  cursor: pointer;\n  background: #ffffff;\n}\n.card[data-v-1324358a]:hover {\n  z-index: 1;\n  transform: scale(1.1);\n  box-shadow: 12px 12px 10px #bbb;\n}\n.card .card-title[data-v-1324358a] {\n  text-transform: capitalize;\n  color: #333;\n}\n.card .card-category[data-v-1324358a] {\n  font-weight: bold;\n  color: #2c72ba;\n}\n.card .card-content[data-v-1324358a] {\n  line-height: 22px;\n}\n.card .card-tag-wrapper[data-v-1324358a] {\n  display: flex;\n  gap: 10px;\n}\n.card .card-tag-wrapper .card-tag[data-v-1324358a] {\n  padding: 3px 6px;\n  border-radius: 20px;\n  font-weight: bold;\n  font-size: 12px;\n  color: #f5f5f5;\n  background: #2c72ba;\n}\n@media screen and (max-width: 900px) {\n.card[data-v-1324358a] {\n    width: 100%;\n}\n}", ""]);
 
 // exports
 
@@ -2056,7 +2057,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#app[data-v-91ac6b5c] {\n  background: #e9ebee;\n}\n#app header[data-v-91ac6b5c] {\n  min-height: 9vh;\n  display: flex;\n  align-items: center;\n  padding: 0 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  left: 0;\n  box-shadow: 0 5px 5px #e9ebee;\n  color: #f5f5f5;\n  background: #2c72ba;\n}\n#app footer[data-v-91ac6b5c] {\n  min-height: 30vh;\n  display: flex;\n  align-items: center;\n  padding: 0 20px;\n  color: #f5f5f5;\n  background: #2c72ba;\n}", ""]);
+exports.push([module.i, "#app[data-v-91ac6b5c] {\n  min-height: 100vh;\n  background: #e9ebee;\n}\n#app header[data-v-91ac6b5c] {\n  min-height: 9vh;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 0 20px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  left: 0;\n  box-shadow: 0 5px 5px #e9ebee;\n  z-index: 999;\n  color: #f5f5f5;\n  background: #2c72ba;\n}\n#app header h1[data-v-91ac6b5c] {\n  font-weight: 900;\n}\n#app header .logo[data-v-91ac6b5c] {\n  width: 35px;\n  height: 35px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 30px;\n  border-radius: 10px;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  color: #2c72ba;\n  transition: 500ms ease-in-out;\n  background: #f5f5f5;\n}\n#app header .logo[data-v-91ac6b5c]:hover {\n  transform: rotate(180deg);\n}\n#app footer[data-v-91ac6b5c] {\n  min-height: 30vh;\n  display: flex;\n  align-items: center;\n  padding: 0 20px;\n  color: #f5f5f5;\n  background: #2c72ba;\n}", ""]);
 
 // exports
 
@@ -2075,7 +2076,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-1585f328] {\n  width: 70vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: white;\n}\n.container .title-wrapper[data-v-1585f328] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-1585f328] {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #333;\n  font-size: 36px;\n  color: #333;\n}", ""]);
+exports.push([module.i, ".container[data-v-1585f328] {\n  width: 80vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #ffffff;\n}\n.container .title-wrapper[data-v-1585f328] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-1585f328] {\n  padding-bottom: 10px;\n  border-bottom: 0.5px solid #333;\n  font-size: 36px;\n  color: #333;\n}", ""]);
 
 // exports
 
@@ -3315,7 +3316,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", [_c("h1", [_vm._v("Boolbook")])])
+    return _c("header", [
+      _c("h1", { staticClass: "logo" }, [_vm._v("B")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("Boolbook")]),
+    ])
   },
   function () {
     var _vm = this

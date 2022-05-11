@@ -40,6 +40,15 @@ export default {
   padding: 20px;
   box-shadow: 2px 2px 5px #bbb;
   border-radius: 10px;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  background: #ffffff;
+
+  &:hover {
+    z-index: 1;
+    transform: scale(1.1);
+    box-shadow: 12px 12px 10px #bbb;
+  }
 
   .card-title {
     text-transform: capitalize;
@@ -67,6 +76,12 @@ export default {
       color: #f5f5f5;
       background: #2c72ba;
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 100%;
   }
 }
 </style>
