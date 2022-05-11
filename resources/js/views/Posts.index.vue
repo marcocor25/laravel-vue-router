@@ -8,6 +8,13 @@
     <div class="container">
       <PostCard v-for="post in posts" :key="post.id" :post="post" />
     </div>
+    <div class="container">
+      <ul class="pagination">
+        <li class="page" v-for="n in lastPage" :key="n">
+          {{ n }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -21,6 +28,8 @@ export default {
   data() {
     return {
       posts: [],
+      lastPage: 0,
+      currentPage: 1,
     };
   },
   methods: {
@@ -30,7 +39,13 @@ export default {
         .then((res) => {
           const { posts } = res.data;
 
-          this.posts = posts;
+          const { data, last_page, current_page } = posts;
+
+          this.posts = data;
+
+          this.lastPage = last_page;
+
+          this.currentPage = current_page;
         })
         .catch((err) => {
           console.warn(err);
@@ -63,6 +78,24 @@ export default {
       border-bottom: 0.5px solid #333;
       font-size: 36px;
       color: #333;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    gap: 10px;
+
+    .page {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid #999;
+      font-weight: bolder;
+      font-size: 12px;
+      color: #555;
     }
   }
 }

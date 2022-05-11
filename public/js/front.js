@@ -1997,6 +1997,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2004,7 +2011,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      posts: []
+      posts: [],
+      lastPage: 0,
+      currentPage: 1
     };
   },
   methods: {
@@ -2013,7 +2022,12 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/api/posts").then(function (res) {
         var posts = res.data.posts;
-        _this.posts = posts;
+        var data = posts.data,
+            last_page = posts.last_page,
+            current_page = posts.current_page;
+        _this.posts = data;
+        _this.lastPage = last_page;
+        _this.currentPage = current_page;
       })["catch"](function (err) {
         console.warn(err);
       });
@@ -2076,7 +2090,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-1585f328] {\n  width: 80vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #ffffff;\n}\n.container .title-wrapper[data-v-1585f328] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-1585f328] {\n  padding-bottom: 10px;\n  border-bottom: 0.5px solid #333;\n  font-size: 36px;\n  color: #333;\n}", ""]);
+exports.push([module.i, ".container[data-v-1585f328] {\n  width: 80vw;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 20px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #ffffff;\n}\n.container .title-wrapper[data-v-1585f328] {\n  padding: 10px;\n  flex-grow: 1;\n}\n.container .title-wrapper h1[data-v-1585f328] {\n  padding-bottom: 10px;\n  border-bottom: 0.5px solid #333;\n  font-size: 36px;\n  color: #333;\n}\n.container .pagination[data-v-1585f328] {\n  display: flex;\n  gap: 10px;\n}\n.container .pagination .page[data-v-1585f328] {\n  width: 20px;\n  height: 20px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  border: 1px solid #999;\n  font-weight: bolder;\n  font-size: 12px;\n  color: #555;\n}", ""]);
 
 // exports
 
@@ -3361,6 +3375,19 @@ var render = function () {
       }),
       1
     ),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "ul",
+        { staticClass: "pagination" },
+        _vm._l(_vm.lastPage, function (n) {
+          return _c("li", { key: n, staticClass: "page" }, [
+            _vm._v("\n        " + _vm._s(n) + "\n      "),
+          ])
+        }),
+        0
+      ),
+    ]),
   ])
 }
 var staticRenderFns = [
